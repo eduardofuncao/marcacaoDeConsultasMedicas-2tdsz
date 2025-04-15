@@ -1,6 +1,6 @@
 # Aplicativo de Marcação de Consultas Médicas
 
-Este é um aplicativo React Native para marcação de consultas médicas, desenvolvido como parte do curso de Desenvolvimento Mobile da FIAP.
+Este é um aplicativo React Native para marcação de consultas médicas, desenvolvido como parte do curso de Desenvolvimento Mobile da FIAP. Fork de Eduardo Função, RM553362
 
 ## Funcionalidades Implementadas
 
