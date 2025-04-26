@@ -18,6 +18,7 @@ type DoctorDashboardScreenProps = {
 interface Appointment {
   id: string;
   patientId: string;
+  patientName: string;
   doctorId: string;
   doctorName: string;
   date: string;
@@ -25,7 +26,6 @@ interface Appointment {
   specialty: string;
   status: 'pending' | 'confirmed' | 'cancelled';
 }
-
 interface StyledProps {
   status: string;
 }
@@ -147,6 +147,14 @@ const DoctorDashboardScreen: React.FC = () => {
                   </ButtonContainer>
                 )}
               </ListItem.Content>
+                <ListItem.Title style={styles.patientName as TextStyle}>
+                Paciente: {appointment.patientName || 'Nome não disponível'}
+               <ListItem.Subtitle style={styles.dateTime as TextStyle}>
+                {appointment.date} às {appointment.time}
+                </ListItem.Subtitle>
+                <Text style={styles.specialty as TextStyle}>
+                {appointment.specialty}
+                </Text>
             </AppointmentCard>
           ))
         )}
@@ -195,6 +203,16 @@ const styles = {
     fontWeight: '700',
     color: theme.colors.text,
   },
+    patientName: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: theme.colors.text,
+    },
+    specialty: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: theme.colors.text,
+    },
 };
 
 const Container = styled.View`
