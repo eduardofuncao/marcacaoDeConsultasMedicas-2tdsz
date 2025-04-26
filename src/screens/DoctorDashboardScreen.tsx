@@ -147,8 +147,6 @@ const DoctorDashboardScreen: React.FC = () => {
                   </ButtonContainer>
                 )}
               </ListItem.Content>
-                <ListItem.Title style={styles.patientName as TextStyle}>
-                Paciente: {appointment.patientName || 'Nome não disponível'}
                <ListItem.Subtitle style={styles.dateTime as TextStyle}>
                 {appointment.date} às {appointment.time}
                 </ListItem.Subtitle>
